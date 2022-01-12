@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pasta Food</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>blog culinária</title>
+  <style>
+      * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 62.5%;
+}
+
+main {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.headline {
+  position: relative;
+  padding: 0 0 0 4rem;
+  max-height: 40rem;
+  display: grid;
+  grid-template-columns: minmax(30rem, 1fr) 1fr;
+  grid-template-rows: 40rem;
+  gap: .5rem;
+  place-items: center;
+  overflow: hidden;
+  background: black;
+  color: white;
+}
+
+.lead {
+  font-size: 2.4rem;
+  z-index: 9;
+}
+.lead h1 {
+  margin-bottom: 2rem;
+  font-size: 5rem;
+  font-weight: bold;
+}
+.lead  p {
+  margin-bottom: 2rem;
+}
+.lead a {
+  padding: 1rem 4rem;
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(-15deg, rgb(255, 136, 0),rgb(255, 136, 0), white);
+  text-decoration: none;
+  border-radius: .8rem;
+  color: black;
+}
+.headline img {
+  margin-left: 2rem;
+  width: 90%;
+  max-width: 40rem;
+  object-fit: fill;
+}
+
+.services {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 4rem 2rem 0 2rem;
+}
+
+.services h2 {
+  margin-bottom: 2.4rem;
+  font-size: 3rem;
+  text-align: center;
+}
+.services .dishes {
+  width: 100%;
+  display: grid;
+  grid-template-areas: 
+  'a a b c' 
+  'a a d e'
+  ;
+  gap: 2.4rem;
+}
+
+.dishes_video {
+  grid-area: a;
+
+}
+
+.dishes img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px .2px rgba(78, 78, 78, 0.24);
+}
+
+.menues {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 4rem 2rem 0 2rem;
+  margin-bottom: 5rem;
+}
+
+.menues h2 {
+  margin-bottom: 2.4rem;
+  font-size: 3rem;
+  text-align: center;
+}
+.menu {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  place-items: center;
+  gap: 2rem;
+}
+
+.menu img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px 0 16px 0;
+  overflow: hidden;
+  /* background: rgba(255, 136, 0, 0.76); */
+  background: black;
+}
+
+@media screen and (max-width: 750px) {
+  .headline img {
+    display: none;
+  }
+  .headline {
+    padding: 0 2rem;
+    grid-template-columns: 1fr;
+    background-image: url('https://i.ibb.co/R0xYKtR/hero.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+  }
+  .headline::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, black 20%, rgba(0, 0, 0, 0));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .services {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+  .services .dishes {
+    grid-auto-rows: 10rem;
+    grid-template-areas: 
+    'a a a a' 
+    'a a a a'
+    'b c d e'
+    ;
+    gap: 1rem;
+  }
+  .menues {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+  .menu {
+    grid-template-columns: repeat(auto-fit, 14rem);
+    place-content: center;
+    gap: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .services .dishes {
+    grid-template-areas: 
+    'a a' 
+    'a a'
+    'b c'
+    'd e'
+    ;
+  }
+} 
+  </style>
+</head>
+<body>
+  <header>
+
+  </header>
+  <main> 
+    <section class="headline">
+      <div class="lead">
+        <h1>Check the <br> best food</h1>
+        <p>Taste an excellent selection of ingredients in every dish</p>
+        <a href="/">Book a Table</a>
+      </div>
+      <img src="https://i.ibb.co/R0xYKtR/hero.png" alt="Delicioso plato de pasto en salsa roja">
+    </section>
+    <section class="services">
+      <h2>Our Services</h2>
+      <article class="dishes">
+        <img src='https://i.ibb.co/GW93Tfq/video.png' class="dishes_video">
+        <img src='https://i.ibb.co/bPrBrZ7/dish1.png'>
+        <img src='https://i.ibb.co/RPF1WmF/dish2.png'>
+        <img src='https://i.ibb.co/JB51dLC/dish3.png'>
+        <img src='https://i.ibb.co/MNcQtyP/dish4.png'>
+      </article>
+    </section>
+    <section class="menues">
+      <h2>Home Menu</h2>
+      <article class="menu">
+        <img src='https://i.ibb.co/n0dgdmL/plate1.png'>
+        <img src='https://i.ibb.co/2h6Xd9b/plate2.png'>
+        <img src='https://i.ibb.co/VBxH1H8/plate3.png'>
+        <img src='https://i.ibb.co/XDt6TX0/plate4.png'>
+        <img src='https://i.ibb.co/b71y6yj/plate5.png'>
+      </article>
+    </section>
+  </main>
+</body>
+</html> 
